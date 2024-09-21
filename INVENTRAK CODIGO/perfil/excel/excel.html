@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importar/Exportar Excel - INVENTRAK</title>
+    <link rel="stylesheet" type="text/css" href="excel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.jpeg" alt="INVENTRAK Logo" class="logo">
+        <ul class="menu">
+            <li><a href="#general">General</a></li>
+            <li><a href="#importar/exportar excel">importar/exportar excel</a></li>
+            <li><a href="#inventarios">Mis Inventarios</a></li>
+            <li><a href="#bodegas">Mis Bodegas</a></li>
+            <li><a href="#proveedores">Mis Proveedores</a></li>
+            <li><a href="#reportes">Reportes</a></li>
+            <li><a href="#configuracion">Configuración</a></li>
+            <li><a href="#averias">Averías</a></li>
+            <li><a href="#AnalisisDemanda">Analisis Demanda</a></li>
+            <li><a href="#Control Calidad">Control Calidad</a></li>
+            <li><a href="#soporte">Soporte</a></li>
+            <li><a href="#cerrar-sesion">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="profile-header">
+            <h1>Importar/Exportar Excel</h1>
+        </div>
+
+        <div class="import-export-section">
+            <h2>Importar Datos</h2>
+            <form id="importForm">
+                <div class="form-group">
+                    <label>Seleccionar archivo Excel:</label>
+                    <input type="file" id="importFile" accept=".xls,.xlsx" required>
+                </div>
+                <button type="button" class="action-button" onclick="importData()">Importar</button>
+            </form>
+        </div>
+
+        <div class="import-export-section">
+            <h2>Exportar Datos</h2>
+            <form id="exportForm">
+                <div class="form-group">
+                    <label>Seleccionar tipo de datos:</label>
+                    <select id="exportType" required>
+                        <option value="inventario">Inventario</option>
+                        <option value="ventas">Ventas</option>
+                        <option value="compras">Compras</option>
+                    </select>
+                </div>
+                <button type="button" class="action-button" onclick="exportData()">Exportar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="excel.jsx"></script>
+</body>
+</html>

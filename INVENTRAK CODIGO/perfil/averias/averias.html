@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Averías - INVENTRAK</title>
+    <link rel="stylesheet" type="text/css" href="averias.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.jpeg" alt="INVENTRAK Logo" class="logo">
+        <ul class="menu">
+            <li><a href="#general">General</a></li>
+            <li><a href="#importarexportarexcel">importar/exportar excel</a></li>
+            <li><a href="#inventarios">Mis Inventarios</a></li>
+            <li><a href="#bodegas">Mis Bodegas</a></li>
+            <li><a href="#proveedores">Mis Proveedores</a></li>
+            <li><a href="#reportes">Reportes</a></li>
+            <li><a href="#configuracion">Configuración</a></li>
+            <li><a href="#averias">Averías</a></li>
+            <li><a href="#AnalisisDemanda">Analisis Demanda</a></li>
+            <li><a href="#Control Calidad">Control Calidad</a></li>
+            <li><a href="#soporte">Soporte</a></li>
+            <li><a href="#cerrar-sesion">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="profile-header">
+            <h1>Averías</h1>
+            <button class="add-button" onclick="toggleForm()">+</button>
+        </div>
+
+        <div class="issue-grid" id="issueGrid">
+            <!-- Averías generadas -->
+            <div class="issue-item">
+                <p>ID: AV-001</p>
+                <p>Descripción: Falla en el sistema de refrigeración</p>
+                <p>Estado: Pendiente</p>
+            </div>
+            <div class="issue-item">
+                <p>ID: AV-002</p>
+                <p>Descripción: Problema con el escáner de códigos</p>
+                <p>Estado: En proceso</p>
+            </div>
+            <div class="issue-item">
+                <p>ID: AV-003</p>
+                <p>Descripción: Error en el software de inventario</p>
+                <p>Estado: Resuelto</p>
+            </div>
+        </div>
+
+        <div class="issue-form" id="issueForm" style="display: none;">
+            <h2>Reportar Nueva Avería</h2>
+            <form id="formularioAveria">
+                <div class="form-group">
+                    <label>Descripción de la Avería:</label>
+                    <input type="text" id="descripcionAveria" placeholder="Descripción" required>
+                </div>
+                <div class="form-group">
+                    <label>Ubicación:</label>
+                    <input type="text" id="ubicacionAveria" placeholder="Ubicación" required>
+                </div>
+                <div class="form-group">
+                    <label>Prioridad:</label>
+                    <select id="prioridadAveria" required>
+                        <option value="alta">Alta</option>
+                        <option value="media">Media</option>
+                        <option value="baja">Baja</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Reporte:</label>
+                    <input type="date" id="fechaReporteAveria" required>
+                </div>
+                <button type="button" class="save-button" onclick="addIssue()">Guardar Avería</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="averias.js"></script>
+</body>
+</html>

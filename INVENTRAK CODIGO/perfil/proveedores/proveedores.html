@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proveedores - INVENTRAK</title>
+    <link rel="stylesheet" type="text/css" href="proveedores.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.jpeg" alt="INVENTRAK Logo" class="logo">
+        <ul class="menu">
+            <li><a href="#general">General</a></li>
+            <li><a href="#inventarios">Mis Inventarios</a></li>
+            <li><a href="#proveedores">Mis Proveedores</a></li>
+            <li><a href="#reportes">Reportes</a></li>
+            <li><a href="#configuracion">Configuración</a></li>
+            <li><a href="#averias">Averías</a></li>
+            <li><a href="#AnalisisDemandas">Ánalisis Demandas</a></li>
+            <li><a href="#ControlCalidad">Control Calidad</a></li>
+            <li><a href="#soporte">Soporte</a></li>
+            <li><a href="#cerrar-sesion">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="profile-header">
+            <h1>Mis Proveedores</h1>
+            <button class="add-button" onclick="toggleForm()">+</button>
+        </div>
+
+        <div class="supplier-grid" id="supplierGrid">
+            <!-- Proveedores generados -->
+            <div class="supplier-item">
+                <img src="https://via.placeholder.com/100?text=Persona" alt="Proveedor 1">
+                <p>Empresa ABC</p>
+                <p>Juan Pérez</p>
+            </div>
+            <div class="supplier-item">
+                <img src="https://via.placeholder.com/100?text=Persona" alt="Proveedor 2">
+                <p>Servicios XYZ</p>
+                <p>María López</p>
+            </div>
+            <div class="supplier-item">
+                <img src="https://via.placeholder.com/100?text=Persona" alt="Proveedor 3">
+                <p>Comercial 123</p>
+                <p>Carlos García</p>
+            </div>
+        </div>
+
+        <div class="supplier-form" id="supplierForm" style="display: none;">
+            <h2>Agregar Nuevo Proveedor</h2>
+            <form id="formularioProveedor">
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" id="nombreProveedor" placeholder="Nombre del proveedor" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo:</label>
+                    <input type="email" id="correoProveedor" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="tel" id="telefonoProveedor" placeholder="Teléfono" required>
+                </div>
+                <div class="form-group">
+                    <label>Número de Identificación Fiscal:</label>
+                    <input type="text" id="idFiscalProveedor" placeholder="ID Fiscal" required>
+                </div>
+                <div class="form-group">
+                    <label>Saldo con el Proveedor:</label>
+                    <input type="number" id="saldoProveedor" placeholder="Saldo" required>
+                </div>
+                <div class="form-group">
+                    <label>Horarios de Atención:</label>
+                    <input type="text" id="horariosProveedor" placeholder="Horarios" required>
+                </div>
+                <div class="form-group">
+                    <label>Fotografía:</label>
+                    <input type="file" id="fotoProveedor" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label>Pago Anticipado:</label>
+                    <input type="radio" id="pagoAnticipadoSi" name="pagoAnticipado" value="si">
+                    <label for="pagoAnticipadoSi">Sí</label>
+                    <input type="radio" id="pagoAnticipadoNo" name="pagoAnticipado" value="no">
+                    <label for="pagoAnticipadoNo">No</label>
+                </div>
+                <div class="form-group">
+                    <label>Pago Retrasado:</label>
+                    <input type="radio" id="pagoRetrasadoSi" name="pagoRetrasado" value="si">
+                    <label for="pagoRetrasadoSi">Sí</label>
+                    <input type="radio" id="pagoRetrasadoNo" name="pagoRetrasado" value="no">
+                    <label for="pagoRetrasadoNo">No</label>
+                </div>
+                <div class="form-group">
+                    <label>Medio de Pago:</label>
+                    <input type="text" id="medioPagoProveedor" placeholder="Medio de pago" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Realización:</label>
+                    <input type="date" id="fechaRealizacionProveedor" required>
+                </div>
+                <button type="button" class="save-button" onclick="addSupplier()">Guardar Proveedor</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="mis-proveedores.js"></script>
+</body>
+</html>

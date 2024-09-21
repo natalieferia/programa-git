@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - INVENTRAK</title>
+    <link rel="stylesheet" type="text/css" href="reportes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.jpeg" alt="INVENTRAK Logo" class="logo">
+        <ul class="menu">
+            <li><a href="#general">General</a></li>
+            <li><a href="#inventarios">Mis Inventarios</a></li>
+            <li><a href="#bodegas">Mis Bodegas</a></li>
+            <li><a href="#proveedores">Mis Proveedores</a></li>
+            <li><a href="#reportes">Reportes</a></li>
+            <li><a href="#configuracion">Configuración</a></li>
+            <li><a href="#usuarios">Usuarios</a></li>
+            <li><a href="#averias">Averías</a></li>
+            <li><a href="#soporte">Soporte</a></li>
+            <li><a href="#cerrar-sesion">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="profile-header">
+            <h1>Reportes</h1>
+            <button class="add-button" onclick="toggleForm()">+</button>
+        </div>
+
+        <div class="report-grid" id="reportGrid">
+            <!-- Reportes generados -->
+            <div class="report-item">
+                <p>ID: RP-001</p>
+                <p>Tipo: Inventario Mensual</p>
+                <p>Fecha: 2024-09-01</p>
+            </div>
+            <div class="report-item">
+                <p>ID: RP-002</p>
+                <p>Tipo: Ventas Diarias</p>
+                <p>Fecha: 2024-09-20</p>
+            </div>
+            <div class="report-item">
+                <p>ID: RP-003</p>
+                <p>Tipo: Compras Semanales</p>
+                <p>Fecha: 2024-09-15</p>
+            </div>
+        </div>
+
+        <div class="report-form" id="reportForm" style="display: none;">
+            <h2>Generar Nuevo Reporte</h2>
+            <form id="formularioReporte">
+                <div class="form-group">
+                    <label>Tipo de Reporte:</label>
+                    <select id="tipoReporte" required>
+                        <option value="inventario">Inventario</option>
+                        <option value="ventas">Ventas</option>
+                        <option value="compras">Compras</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Inicio:</label>
+                    <input type="date" id="fechaInicioReporte" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Fin:</label>
+                    <input type="date" id="fechaFinReporte" required>
+                </div>
+                <div class="form-group">
+                    <label>Descripción:</label>
+                    <input type="text" id="descripcionReporte" placeholder="Descripción" required>
+                </div>
+                <button type="button" class="save-button" onclick="addReport()">Guardar Reporte</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="reportes.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+    background-color: #ececec;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    background-color: #f0f1f2;
+    padding: 10px 10%;
+}
+
+.back-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.product-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #222601;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #222601;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+    font-family: poppins;
+}
+
+.expiry-date input {
+    width: 30%;
+    margin-right: 5px;
+}
+
+.image-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.radio-options label {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #222601;
+}
+
+.radio-options input[type="radio"] {
+    margin-right: 5px;
+    accent-color: #1074b5;
+}
+
+.save-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ccd870;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #222602;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #b8c65a;
+}

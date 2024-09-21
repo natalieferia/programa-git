@@ -1,0 +1,59 @@
+body {
+    background-color: #ececec;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.store-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f1f2;
+    border-radius: 10px;
+    box-shadow: #222602;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #222602;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.input-methods {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.manual-entry-button, .barcode-entry-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #a9bf04;
+    color: #222602;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.manual-entry-button:hover, .barcode-entry-button:hover {
+    background-color: #94a303;
+}
+
+.sales-log {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sales-log ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sales-log li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}

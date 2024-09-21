@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Producto - INVENTRAK</title>
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-header">
+        <span class="back-icon">🔙</span>
+        <img src="logo.jpeg" alt="INVENTRAK Logo" class="logo">
+    </div>
+
+    <form class="product-form">
+        <div class="form-group">
+            <label>Nombre:</label>
+            <input type="text" placeholder="Nombre del producto">
+        </div>
+        <div class="form-group">
+            <label>Código:</label>
+            <input type="text" placeholder="Código del producto">
+        </div>
+        <div class="form-group">
+            <label>Cantidad:</label>
+            <input type="number" placeholder="Cantidad">
+        </div>
+        <div class="form-group">
+            <label>Precio de entrada:</label>
+            <input type="number" placeholder="Precio de entrada">
+        </div>
+        <div class="form-group">
+            <label>Precio de salida:</label>
+            <input type="number" placeholder="Precio de salida">
+        </div>
+        <div class="form-group">
+            <label>Fecha de caducidad:</label>
+            <div class="expiry-date">
+                <input type="number" placeholder="Día" min="1" max="31">
+                <input type="number" placeholder="Mes" min="1" max="12">
+                <input type="number" placeholder="Año" min="2023">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Descripción:</label>
+            <textarea placeholder="Descripción del producto"></textarea>
+        </div>
+        <div class="form-group">
+            <label>Imagen del producto:</label>
+            <span class="image-icon">🖼️</span>
+        </div>
+        <div class="form-group">
+            <label>Fecha de última modificación:</label>
+            <p>01/01/2024</p>
+        </div>
+        <div class="form-group">
+            <label>stock:</label>
+            <div class="radio-options">
+                <label>
+                    <input type="radio" name="option" value="opcion1">
+                    en stock
+                </label>
+                <label>
+                    <input type="radio" name="option" value="opcion2">
+                    fuera de stock
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="save-button">Guardar Producto</button>
+    </form>
+</body>
+</html>

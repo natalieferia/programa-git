@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Bodegas - INVENTRAK</title>
+    <link rel="stylesheet" type="text/css" href="bodegas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.jpeg" alt="INVENTRAK Logo" class="logo">
+        <ul class="menu">
+            <li><a href="#general">General</a></li>
+            <li><a href="#importarexportarexcel">importar/exportar excel</a></li>
+            <li><a href="#inventarios">Mis Inventarios</a></li>
+            <li><a href="#bodegas">Mis Bodegas</a></li>
+            <li><a href="#reportes">Reportes</a></li>
+            <li><a href="#configuracion">Configuración</a></li>
+            <li><a href="#averias">Averías</a></li>
+            <li><a href="#AnalisisDemanda">Analisis Demanda</a></li>
+            <li><a href="#ControlCalidad">Control Calidad</a></li>
+            <li><a href="#Soporte">Soporte</a></li>
+            <li><a href="#cerrar-sesion">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="profile-header">
+            <h1>Mis Bodegas</h1>
+            <button class="add-button" onclick="toggleForm()">+</button>
+        </div>
+
+        <div class="warehouse-grid" id="warehouseGrid">
+            <!-- Bodegas generadas -->
+            <div class="warehouse-item">
+                <img src="https://via.placeholder.com/150?text=Imagen" alt="Bodega 1">
+                <p>BDG-001</p>
+                <p>Bodega Central</p>
+            </div>
+            <div class="warehouse-item">
+                <img src="https://via.placeholder.com/150?text=Imagen" alt="Bodega 2">
+                <p>BDG-002</p>
+                <p>Bodega Norte</p>
+            </div>
+            <div class="warehouse-item">
+                <img src="https://via.placeholder.com/150?text=Imagen" alt="Bodega 3">
+                <p>BDG-003</p>
+                <p>Bodega Sur</p>
+            </div>
+        </div>
+
+        <div class="warehouse-form" id="warehouseForm" style="display: none;">
+            <h2>Agregar Nueva Bodega</h2>
+            <form id="formularioBodega">
+                <div class="form-group">
+                    <label>Nombre de la Bodega:</label>
+                    <input type="text" id="nombreBodega" placeholder="Nombre de la bodega" required>
+                </div>
+                <div class="form-group">
+                    <label>Código:</label>
+                    <input type="text" id="codigoBodega" placeholder="Código de la bodega" required>
+                </div>
+                <div class="form-group">
+                    <label>Ubicación:</label>
+                    <input type="text" id="ubicacion" placeholder="Ubicación" required>
+                </div>
+                <button type="button" class="save-button" onclick="addWarehouse()">Guardar Bodega</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="bodegas.js"></script>
+</body>
+</html>

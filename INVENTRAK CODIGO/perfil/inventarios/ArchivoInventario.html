@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Lácteos 2021 - INVENTRAK</title>
+    <link rel="stylesheet" type="text/css" href="archivoinventario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="inventory-detail-header">
+        <span class="back-icon">🔙</span>
+        <img src="logo.jpeg" alt="INVENTRAK Logo" class="logo">
+        <input type="text" placeholder="Buscar..." class="search-bar">
+        <span class="search-icon">🔍</span>
+    </div>
+
+    <div class="inventory-detail-bar">
+        <h2>Inventario Lácteos 2021</h2>
+        <div class="options">
+            <span onclick="toggleForm()">Agregar Producto</span>
+            <span>Sistema PEPS</span>
+            <span>Modificar</span>
+        </div>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+        <!-- Productos generados -->
+        <div class="product-item">
+            <img src="https://via.placeholder.com/150?text=Imagen" alt="Producto 1">
+            <p>COD-1234</p>
+            <p>Queso Crema Colanta</p>
+        </div>
+        <div class="product-item">
+            <img src="https://via.placeholder.com/150?text=Imagen" alt="Producto 2">
+            <p>COD-5678</p>
+            <p>Leche Entera Alpina</p>
+        </div>
+        <div class="product-item">
+            <img src="https://via.placeholder.com/150?text=Imagen" alt="Producto 3">
+            <p>COD-9101</p>
+            <p>Yogur Natural Alpina</p>
+        </div>
+        <!-- Repite este bloque para más productos -->
+    </div>
+
+    <div class="product-form" id="productForm" style="display: none;">
+        <h2>Agregar Nuevo Producto</h2>
+        <form id="formularioProducto">
+            <div class="form-group">
+                <label>Nombre del Producto:</label>
+                <input type="text" id="nombreProducto" placeholder="Nombre del producto" required>
+            </div>
+            <div class="form-group">
+                <label>Código:</label>
+                <input type="text" id="codigo" placeholder="Código del producto" required>
+            </div>
+            <div class="form-group">
+                <label>Cantidad:</label>
+                <input type="number" id="cantidad" placeholder="Cantidad" required>
+            </div>
+            <div class="form-group">
+                <label>Precio de Entrada:</label>
+                <input type="number" id="precioEntrada" placeholder="Precio de entrada" required>
+            </div>
+            <div class="form-group">
+                <label>Precio de Salida:</label>
+                <input type="number" id="precioSalida" placeholder="Precio de salida" required>
+            </div>
+            <button type="button" class="save-button" onclick="addProduct()">Guardar Producto</button>
+        </form>
+    </div>
+
+    <script src="archivoinventario.js"></script>
+</body>
+</html>
