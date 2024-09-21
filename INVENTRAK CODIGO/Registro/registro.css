@@ -1,0 +1,79 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Cambia a la fuente que prefieras */
+    background-color: #f4f4f9; /* Color de fondo suave */
+    color: #222601; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos del formulario */
+.formulario {
+    background-color: #fff; /* Fondo blanco para el formulario */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.formulario h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #a9bf04; /* Color azul para el título */
+    text-align: center;
+}
+
+.formulario div {
+    margin-bottom: 15px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.formulario .recordar {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.formulario input[type="submit"] {
+    background-color: #a9bf04; /* Botón azul */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #a9bf04; /* Azul más oscuro al pasar el ratón */
+}
+
+.formulario .registrado {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #a9bf04;
+}
+
+
+
